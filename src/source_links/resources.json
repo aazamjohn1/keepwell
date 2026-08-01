@@ -4,8 +4,17 @@
     "title": "React Resources",
     "type": "video",
     "category": "React",
-    "url": "https://example.com",
+    "url": "https://www.youtube.com/results?search_query=react+course",
     "description": "React learning material",
     "tags": ["react", "frontend"]
+  },
+  {
+    "id": "system-design",
+    "title": "System Design Notes",
+    "type": "pdf",
+    "category": "Backend",
+    "url": "",
+    "description": "Architecture and backend notes",
+    "tags": ["backend", "architecture"]
   }
 ]
