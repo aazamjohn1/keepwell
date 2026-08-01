@@ -1,11 +1,14 @@
+import { useParams } from "react-router-dom";
 import { ResourceViewer } from "../features/viewer/ResourceViewer";
+import { useResourceById } from "../features/viewer/useResourceById";
 
 export function ViewerPage() {
-  return <ResourceViewer resource={{
-    id: "preview",
-    title: "Preview",
-    type: "video",
-    category: "demo",
-    url: ""
-  }} />;
+  const { id } = useParams();
+  const resource = useResourceById(id ?? "");
+
+  if (!resource) {
+    return <p>Resource not found.</p>;
+  }
+
+  return <ResourceViewer resource={resource} />;
 }
