@@ -1,0 +1,11 @@
+[
+  {
+    "id": "react-course",
+    "title": "React Resources",
+    "type": "video",
+    "category": "React",
+    "url": "https://example.com",
+    "description": "React learning material",
+    "tags": ["react", "frontend"]
+  }
+]
