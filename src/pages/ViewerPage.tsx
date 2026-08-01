@@ -9,14 +9,15 @@ export function ViewerPage() {
   const resource = useResourceById(id ?? "");
 
   useEffect(() => {
-    if (resource) {
-      trackViewed(resource.id);
-    }
+    if (resource) trackViewed(resource.id);
   }, [resource]);
 
-  if (!resource) {
-    return <p>Resource not found.</p>;
-  }
+  if (!resource) return <p>Resource not found.</p>;
 
-  return <ResourceViewer resource={resource} />;
+  return (
+    <section>
+      <h1>{resource.title}</h1>
+      <ResourceViewer resource={resource} />
+    </section>
+  );
 }
